@@ -37,6 +37,10 @@
       <HintPath>..\packages\NSoup.0.8.0\lib\net40\NSoup.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SharpHttpClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\SharpHttpClient.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -84,12 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\SharpHttp\SharpHttp\SharpHttp.csproj">
-      <Project>{49bb9b8d-835d-4148-837f-5e5de2c2afb8}</Project>
-      <Name>SharpHttp</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
