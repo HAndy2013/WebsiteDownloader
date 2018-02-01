@@ -1,4 +1,5 @@
-﻿using SharpHttp;
+﻿using Downloader;
+using SharpHttp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace WebsiteDownloader
 {
     public partial class Form1 : Form
     {
-        Downloader _downloader = null;
+        Downloader.Downloader _downloader = null;
 
         public Form1()
         {
@@ -49,8 +50,8 @@ namespace WebsiteDownloader
 
             if (_downloader == null)
             {
-                _downloader = new Downloader(client,
-                    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "files"),
+                _downloader =new Downloader.Downloader (client,
+                    Path.Combine(AppDomain.CurrentDomain.BaseDirectory, new Uri(url).Host),
                     url);
             }
             _downloader.Stop = false;
